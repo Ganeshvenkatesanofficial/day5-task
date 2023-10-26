@@ -1,0 +1,89 @@
+1. For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+const jsonData = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+};
+
+// Parsing the JSON into a JavaScript object
+const jsonObject = JSON.parse(JSON.stringify(jsonData));
+
+// Using different loops to iterate over the object
+console.log("Using for loop:");
+for (const key in jsonObject) {
+  console.log(key + ": " + jsonObject[key]);
+}
+
+console.log("\nUsing for...in loop:");
+for (const key in jsonObject) {
+  console.log(key + ": " + jsonObject[key]);
+}
+
+console.log("\nUsing for...of loop:");
+for (const key of Object.keys(jsonObject)) {
+  console.log(key + ": " + jsonObject[key]);
+}
+
+console.log("\nUsing forEach loop:");
+Object.keys(jsonObject).forEach((key) => {
+  console.log(key + ": " + jsonObject[key]);
+});
+
+2. Create your own resume data in JSON format
+
+const myresume={
+  "name": "John Doe",
+  "contact": {
+    "email": "johndoe@email.com",
+    "phone": "+123-456-7890",
+    "address": "123 Main Street, Cityville, USA"
+  },
+  "summary": "Experienced software engineer with a passion for solving complex problems and a strong background in web development and machine learning.",
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "University of Techville",
+      "graduation_year": 2015
+    },
+    {
+      "degree": "Master of Science in Artificial Intelligence",
+      "university": "AI Institute",
+      "graduation_year": 2017
+    }
+  ],
+  "work_experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Tech Solutions Inc.",
+      "start_date": "2017-01-01",
+      "end_date": "2022-05-15",
+      "responsibilities": [
+        "Led a team of developers in creating a scalable web application for clients",
+        "Implemented machine learning algorithms for data analysis and prediction",
+        "Collaborated with product managers to define project requirements and milestones"
+      ]
+    },
+    {
+      "title": "Software Developer",
+      "company": "CodeCrafters Co.",
+      "start_date": "2015-05-01",
+      "end_date": "2016-12-31",
+      "responsibilities": [
+        "Developed and maintained web applications using modern front-end and back-end technologies",
+        "Participated in code reviews and contributed to software architecture decisions"
+      ]
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "Python",
+    "React",
+    "Node.js",
+    "Machine Learning",
+    "Data Analysis",
+    "Team Leadership"
+  ],
+  "languages": ["English (Fluent)", "Spanish (Intermediate)"]
+}
+console.log(myresume);
